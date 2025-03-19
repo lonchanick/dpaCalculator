@@ -13,10 +13,17 @@ fruta_opcionE.addEventListener('change',()=>{
 
 function calculate()
 {
-    const kit_dpa = parseFloat(kit_dpaE.value);
+    const kit_dpa = parseFloat(kit_dpaE.value)*100;
     const litros_agua = parseFloat(litros_aguaE.value);
     resultContainer.innerHTML += 
     `<p class="mb-0">Cantidad DPA en tanque: ${((kit_dpa * litros_agua)/310000).toFixed(2)} Litros.</p>
     <p class="mb-0">Degradacion: ${ppm_fruta-kit_dpa}PPM -${100 - ((kit_dpa*100) / ppm_fruta).toFixed(2)}%</p>
     <p class="mb-3">DPA a recargar: ${((ppm_fruta-kit_dpa)*4000/310000).toFixed(2)} Litros.</p>`;
+}
+
+function reset()
+{
+    kit_dpaE.value='';
+    resultContainer.innerHTML='';
+    litros_aguaE.value='';
 }
