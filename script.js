@@ -6,7 +6,7 @@ let ppm_fruta = 1500;
 
 fruta_opcionE.addEventListener('change',()=>{
     if(fruta_opcionE.value === 'manzana')
-        ppm_fruta =1700;
+        ppm_fruta =2000;
     else if(fruta_opcionE.value === 'pera')
         ppm_fruta = 1500;
 });
