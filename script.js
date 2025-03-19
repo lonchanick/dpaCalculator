@@ -13,7 +13,7 @@ fruta_opcionE.addEventListener('change',()=>{
 
 function calculate()
 {
-    const kit_dpa = parseFloat(kit_dpaE.value)*100;
+    const kit_dpa = parseFloat(kit_dpaE.value);
     const litros_agua = parseFloat(litros_aguaE.value);
     resultContainer.innerHTML += 
     `<p class="mb-0">Cantidad DPA en tanque: ${((kit_dpa * litros_agua)/310000).toFixed(2)} Litros.</p>
