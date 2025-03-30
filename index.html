@@ -12,13 +12,16 @@
         <option value="pera">Pera</option>
         <option value="manzana">Manzana</option>
     </select> -->
-    <label for="ppm" class="form-label">PPM Fruta:</label>
+    <label class="form-label">PPM Fruta:</label>
     <div class="">
-        <button onclick="recalcDPA()" id="ppm" class="btn btn-primary btn-sm"></button>
+        <button onclick="showPanelRecalc()" id="ppm" class="btn btn-primary btn-sm"></button>
         <!-- <button class="btn btn-primary btn-sm" onclick="recalcDPA()">SHOW RECALC</button> -->
-        <div id="dpa_recalc_container" hidden>
+        <div id="dpa_recalc_container" class="d-none d-flex flex-column">
             <input type="number" id="dpa_recalc_val" class="form-control">
-            <button id="recalc" class="btn btn-primary btn-sm" onclick="recalcDPA()">RECALC</button>
+            <div class="d-flex justify-content-center">
+                <button id="recalc" class="btn btn-primary btn-sm m-1" onclick="recalcDPA()">RECALC</button>
+                <button id="cancelRecalc" class="btn btn-primary btn-sm m-1" onclick="cancelRecalcDPA()">Cancel</button>
+            </div>
         </div>
     </div>
 
@@ -28,8 +31,8 @@
     <label for="litros_agua" class="form-label">Litros de Agua:</label>
     <input type="number" id="litros_agua" class="form-control">
     <div>
-        <button onclick="calculate()" class="mt-4">CALCULAR</button>
-        <button onclick="reset()" class="mt-4">RESET</button>
+        <button onclick="calculate()" class="mt-4 btn btn-primary">CALCULAR</button>
+        <button onclick="reset()" class="mt-4 btn btn-primary">RESET</button>
     </div>
     <div id="result" class="mt-4"></div>
 
